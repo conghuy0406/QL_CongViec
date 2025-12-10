@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lined_paper_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title + các nút thao tác -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/coiny"
+                    android:text="My List"
+                    android:textColor="#61916F"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_calender"
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:fontFamily="@font/coiny"
+                    android:text="Calender"
+                    android:textSize="12sp"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/btn_add"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:fontFamily="@font/coiny"
+                    android:text="Add task"
+                    android:textSize="14sp"
+                    app:backgroundTint="@null" />
+
+            </TableRow>
+        </TableLayout>
+
+        <!-- GridLayout chứa các Card -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true"
+            android:layout_marginTop="16dp" />
+
+        <!-- Nút Logout -->
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_3"
+            android:layout_gravity="center"
+            android:fontFamily="@font/coiny"
+            android:text="Logout"
+            android:textColor="#61916F"
+            android:textSize="14sp"
+            app:backgroundTint="@null" />
+    </LinearLayout>
+</ScrollView>
